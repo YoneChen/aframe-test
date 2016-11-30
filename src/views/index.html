@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>vr test</title>
+
+  <script src="../js/aframe.js"></script>
+</head>
+
+<body>
+  <a-scene fog="type: linear; color: #fff">
+    <a-assets>
+      <!--<img id="bg" src="../img/bg.jpg">-->
+      <a-asset-item id="ballon1" src="../components/ballon_green.dae"></a-asset-item>
+      <a-asset-item id="ballon2" src="../components/ballon_blue.dae"></a-asset-item>
+      <a-asset-item id="ballon3" src="../components/ballon_red.dae"></a-asset-item>
+      <a-asset-item id="sea" src="../components/sea.dae"></a-asset-item>
+      <a-asset-item id="moutain" src="../components/moutain.dae"></a-asset-item>
+    </a-assets>
+    <!-- <a-box position="-1 0.5 -3" rotation="0 45 0" color="#1abc9c">
+      <a-animation attribute="rotation" repeat="indefinite" to="0 405 0"></a-animation>
+      <a-animation attribute="color" repeat="indefinite" from="#00aadd" to="#1abc9c"></a-animation>
+      <a-animation attribute="scale" repeat="indefinite" from="1 1 1" to="1 2 1"></a-animation>
+    </a-box> -->
+    <a-entity collada-model="#ballon1">
+      <a-animation attribute="position" dur="60000" from="10 0 0" to="12 66 20"></a-animation>
+    </a-entity>
+    <a-entity collada-model="#ballon2" scale="1.2 1.2 1.2">
+      <a-animation attribute="position" dur="60000" from="15 6 22" to="18 92 30"></a-animation>
+    </a-entity>
+    <a-entity collada-model="#ballon3">
+      <a-animation attribute="position" dur="60000" from="5 16 15" to="18 82 20"></a-animation>
+    </a-entity>
+    <a-entity collada-model="#ballon1" scale="1.2 1.2 1.2">
+      <a-animation attribute="position" dur="50000" from="6 14 3" to="8 85 6"></a-animation>
+    </a-entity>
+    <a-entity collada-model="#ballon2">
+      <a-animation attribute="position" dur="60000" from="8 26 0" to="5 98 15"></a-animation>
+    </a-entity>
+    <a-entity collada-model="#ballon3" scale="0.8 0.8 0.8">
+      <a-animation attribute="position" dur="60000" from="-6 6 3" to="-8 75 6"></a-animation>
+    </a-entity>
+    <a-entity collada-model="#ballon1" scale="0.8 0.8 0.8">
+      <a-animation attribute="position" dur="60000" from="-9 10 -3" to="-7 78 -6"></a-animation>
+    </a-entity>
+    <a-entity collada-model="#ballon2" scale="1.8 1.8 1.8">
+      <a-animation attribute="position" dur="60000" from="5 12 -7" to="8 85 -10"></a-animation>
+    </a-entity>
+    <a-entity collada-model="#ballon3" scale="0.8 0.8 0.8">
+      <a-animation attribute="position" dur="60000" from="-9 10 -3" to="-7 78 2"></a-animation>
+    </a-entity>
+    <a-entity collada-model="#ballon1">
+      <a-animation attribute="position" dur="60000" from="14 4 -12" to="-7 74 -16"></a-animation>
+    </a-entity>
+    <a-entity collada-model="#moutain" scale="40 60 40" position="180 -4 -180"></a-entity>
+    <a-entity collada-model="#sea" scale="80 80 80" position="300 8 -200">
+<a-animation attribute="position" dur="60000" to="300 32 -200"></a-animation>
+    </a-entity>
+    <a-entity collada-model="#moutain" scale="100 0.1 100" position="0 -4 0"></a-entity>
+    
+    <!--<a-sphere radius="20" depthTest="false" opacity="0.2" transparent="true" color="#fff" shader="flat" position="-400 200 400"></a-sphere>-->
+    <a-sky color="#71BEFB" radius="500">
+    </a-sky>
+    <a-entity camera look-controls>
+      <a-animation attribute="position" dur="30000" from="10 0 20" to="0 90 20"></a-animation>
+      <a-cursor id="cursor">
+        <a-animation begin="click" easing="ease-in" attribute="scale" fill="backwards" from="0.1 0.1 0.1" to="1 1 1" dur="150"></a-animation>
+        <a-animation begin="cursor-fusing" easing="ease-in" attribute="scale" from="1 1 1" to="0.1 0.1 0.1" dur="1500"></a-animation>
+      </a-cursor>
+    </a-entity>
+  </a-scene>
+</body>
+
+</html>

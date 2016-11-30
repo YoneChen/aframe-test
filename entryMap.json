@@ -1,0 +1,4 @@
+{
+    "index":"./src/js/index.js",
+    "aframe":"./src/js/aframe.js"
+}
